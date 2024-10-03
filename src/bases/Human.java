@@ -19,7 +19,7 @@ public abstract class Human extends Living{
 		this.offensive --;
 		// コンソールにステータスを表示
 
-		System.out.printf("\n「 %s 」が「 %s 」で攻撃！「 %s 」に %d のダメージを与えた。\n", name, weapon, target.name, damage);
+		System.out.printf("\n「 %s 」が「 %s 」で攻撃！「 %s 」に %d のダメージを与えた。\n", this.name, this.weapon, target.name, damage);
 		System.out.println("\nしかし自分の攻撃力も1減少した。");
 	}
 }
