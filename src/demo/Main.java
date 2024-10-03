@@ -84,18 +84,18 @@ public class Main {
 
 
 			// 人間グループから1人選択
-			Human humanB = choiceHuman(humans);
+			human = choiceHuman(humans);
 
 			// モンスターグループから1人選択
-			Monster monsterB = choiceMonster(monsters);
+			monster = choiceMonster(monsters);
 
 			// 選ばれたモンスターが、選ばれた人間を攻撃
-			monsterB.attack(humanB);
+			monster.attack(human);
 
 			// 人間のHPが0以下になれば、人間は倒れ、その人間をモンスターグループから削除
-			if(humanB.getHp() <= 0) {
-				humans.remove(humanB);
-				System.out.println("★ 「"+ humanB.getName() +"」は倒れた。\n");
+			if(human.getHp() <= 0) {
+				humans.remove(human);
+				System.out.println("★ 「"+ human.getName() +"」は倒れた。\n");
 			}
 			// 人間グループに誰もいなくなれば、人間グループの敗北
 			if(humans.isEmpty()) {
