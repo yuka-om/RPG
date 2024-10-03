@@ -7,7 +7,7 @@ public abstract class Human extends Living{
 	public Human(String name, String weapon) {
 		super(name, weapon);
 	}
-	
+
 	@Override
 	public void attack(Living target) {
 		// 1から10までのサイコロを振り、自分の攻撃力とかけ合わせた値を相手に与えるダメージとする
@@ -18,8 +18,8 @@ public abstract class Human extends Living{
 		// 自分の攻撃力を1だけ減らす
 		this.offensive --;
 		// コンソールにステータスを表示
-		
-		System.out.printf("「 %s 」が「 %s 」で攻撃！「 %s 」に %d のダメージを与えた。\n",name ,weapon ,target.name ,damage);
-		System.out.println("しかし自分の攻撃力も1減少した。");
+
+		System.out.printf("\n「 %s 」が「 %s 」で攻撃！「 %s 」に %d のダメージを与えた。\n", name, weapon, target.name, damage);
+		System.out.println("\nしかし自分の攻撃力も1減少した。");
 	}
 }

@@ -72,12 +72,12 @@ public class Main {
 			}
 			
 			// モンスターグループに誰もいなくなれば、人間グループの勝利
-			if(monsters.size() <= 0) {
+			if(monsters.isEmpty()) {
 				
 				System.out.println("★★ ==== 決着がついた！！ ==== ★★\n");
 				System.out.println("#### 人間達は勝利した！！ ####\n");
 				break;
-			}else {
+			}
 
 			System.out.println("\n[モンスターのターン！]\n");
 			
@@ -85,7 +85,7 @@ public class Main {
 
 			// 人間グループから1人選択
 			Human humanB = choiceHuman(humans);
-
+			
 			// モンスターグループから1人選択
 			Monster monsterB = choiceMonster(monsters);
 
@@ -98,12 +98,12 @@ public class Main {
 				System.out.println("★ 「"+ humanB.getName() +"」は倒れた。\n");
 			}
 			// 人間グループに誰もいなくなれば、人間グループの敗北
-			if(humans.size() <= 0) {
+			if(humans.isEmpty()) {
 				System.out.println("★★ ==== 決着がついた！！ ==== ★★\n");
 				
 				System.out.println("#### 人間達は敗北した ####\n");
 				break;
-			}else {
+			}
 
 			// 現在の各グループの状態を一覧表示
 			showGroupInfos(humans, monsters);
@@ -111,8 +111,8 @@ public class Main {
 			// ループ変数を1増やす
 			count++;
 			}
-		}
-		}
+		
+		
 
 		// 最後に各グループの状態を一覧表示してプログラム終了
 		showGroupInfos(humans, monsters);
